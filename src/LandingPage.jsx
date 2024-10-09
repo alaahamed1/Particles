@@ -43,12 +43,13 @@ const ParticleBackground = () => {
 
 const LandingPage = () => {
   useEffect(() => {
-    const handleScroll = () => {
-      const nav = document.querySelector('nav');
-      const secondSection = document.querySelector('.second-section');
-      const secondSectionTop = secondSection.getBoundingClientRect().top;
+    const nav = document.querySelector('nav');
+    const initialNavTop = nav.getBoundingClientRect().top + window.scrollY;
 
-      if (secondSectionTop <= 0) {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll >= initialNavTop) {
         nav.classList.add('sticky');
         nav.classList.add('opaque');
       } else {
