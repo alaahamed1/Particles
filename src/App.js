@@ -1,13 +1,12 @@
 
-import ParticleBackground from "./component/ParticleBackground ";
+// import ParticleBackground from "./component/ParticleBackground ";
+import LandingPage from "./LandingPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <ParticleBackground/>
-      </header>
-    </div>
+    <>
+    <LandingPage/>
+    </>
   );
 }
 
